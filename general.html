@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-color="neutral">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Alexander Reusch - Resume</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/resume.css">
+    <link rel="stylesheet" href="css/controls.css">
+
+    <!-- Anti-FOUC Theme Pre-initialization -->
+    <script>
+        (function () {
+            const mode = localStorage.getItem('resume_mode') || 'system';
+            const color = localStorage.getItem('resume_color') || 'neutral';
+            const isDark = mode === 'system' ? window.matchMedia('(prefers-color-scheme: dark)').matches : mode === 'dark';
+            document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-color', color);
+        })();
+    </script>
+</head>
+<body>
+
+<main class="page-container">
+    <header>
+        <h1>Justin Alexander Reusch</h1>
+        <div class="contact-info">
+            <span>Phone: 512-743-7490</span>
+            <a href="mailto:reuschj@gmail.com">reuschj@gmail.com</a>
+            <a href="https://linkedin.com/in/reuschj" target="_blank" rel="noopener">LinkedIn: reuschj</a>
+            <a href="https://github.com/reuschj" target="_blank" rel="noopener">GitHub: reuschj</a>
+        </div>
+    </header>
+
+    <section>
+        <h2>Summary</h2>
+        <p>Versatile professional with a multidisciplinary background spanning software development, user interface design, corporate communications, and multimedia production. Combines technical depth with strong visual and strategic communication skills to lead cross-functional initiatives and deliver high-impact digital products.</p>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li><strong>Product &amp; Strategy:</strong> Product management, business analysis, market research, technical documentation, cross-functional leadership, stakeholder communication</li>
+            <li><strong>Software &amp; Systems:</strong> <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener">TypeScript</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener">JavaScript</a>, <a href="https://react.dev/" target="_blank" rel="noopener">React</a>, <a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js</a>, <a href="https://www.rust-lang.org/" target="_blank" rel="noopener">Rust</a>, <a href="https://developer.apple.com/swift/" target="_blank" rel="noopener">Swift</a>, <a href="https://www.python.org/" target="_blank" rel="noopener">Python</a>, HTML5, CSS3/Sass, Git, RESTful APIs, agentic AI workflows (<a href="https://cursor.com/" target="_blank" rel="noopener">Cursor</a>, <a href="https://claude.ai/" target="_blank" rel="noopener">Claude</a>)</li>
+            <li><strong>Design &amp; Multimedia:</strong> UI/UX design, wireframing, graphic design, video production &amp; editing, motion graphics (Adobe Creative Cloud: Photoshop, Illustrator, Premiere Pro, After Effects, InDesign)</li>
+            <li><strong>Communications &amp; Marketing:</strong> Product and brand messaging, executive communications, digital content creation, sales enablement, intranet tools, corporate social media</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Professional Experience</h2>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title"><a href="https://valstro.com/" target="_blank" rel="noopener">Valstro</a></span>
+                <span class="entry-location">New York, N.Y. (Remote)</span>
+            </div>
+            <div class="entry-subtitle">
+                <span>Senior Software Engineer, Core UI</span>
+                <span class="date">July 2022 &ndash; Present</span>
+            </div>
+            <ul>
+                <li>Architect and develop high-performance desktop interfaces for institutional financial applications using TypeScript, React, AG Grid, and Rust.</li>
+                <li>Streamline development workflows by integrating agentic AI tools and LLMs for architectural planning, implementation, and automated testing.</li>
+                <li>Collaborate with cross-functional product and engineering teams to translate complex financial requirements into clean, performant interfaces.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title"><a href="https://tech.walmart.com/" target="_blank" rel="noopener">Walmart Global Tech</a></span>
+                <span class="entry-location">Bentonville, Ark.</span>
+            </div>
+            <div class="stacked-role">
+                <span>Software Engineer III</span>
+                <span class="date">Oct. 2021 &ndash; July 2022</span>
+            </div>
+            <div class="stacked-role">
+                <span>Software Engineer II</span>
+                <span class="date">Jan. 2021 &ndash; Oct. 2021</span>
+            </div>
+            <div class="stacked-role" style="margin-bottom: 0.5rem;">
+                <span>Associate Software Engineer</span>
+                <span class="date">June 2018 &ndash; Jan. 2021</span>
+            </div>
+            <ul>
+                <li>Engineered core software frameworks and reusable UI libraries powering point-of-sale systems across Walmart retail stores nationwide.</li>
+                <li>Integrated client applications with specialized in-store hardware peripherals to guarantee high-reliability transaction processing.</li>
+                <li>Authored platform documentation, conducted peer code reviews, and mentored junior team members.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title"><a href="https://corporate.walmart.com/" target="_blank" rel="noopener">Walmart Inc.</a></span>
+                <span class="entry-location">Bentonville, Ark.</span>
+            </div>
+            <div class="entry-subtitle">
+                <span>Manager II, Store Communications</span>
+                <span class="date">May 2016 &ndash; June 2018</span>
+            </div>
+            <ul>
+                <li>Directed digital communications and content strategy supporting major corporate initiatives across Walmart U.S.</li>
+                <li>Built interactive intranet applications, email templates, and digital resources utilizing HTML, CSS, and JavaScript to enhance organizational efficiency.</li>
+                <li>Partnered with senior leadership to craft targeted messaging and ensure business communication alignment.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title"><a href="https://www.dell.com/" target="_blank" rel="noopener">Dell Technologies</a></span>
+                <span class="entry-location">Austin, Texas</span>
+            </div>
+            <div class="entry-subtitle">
+                <span>Product Sr. Analyst &ndash; Marketing</span>
+                <span class="date">Nov. 2012 &ndash; May 2016</span>
+            </div>
+            <ul>
+                <li>Managed product marketing, multimedia production, and sales support for Dell's rugged computing hardware line.</li>
+                <li>Produced video demonstrations, customer presentations, product collateral, and digital advertising campaigns; conducted market and competitive analysis.</li>
+                <li>Led UX design and user interface mockups for the Dell Rugged Command Center tablet application.</li>
+                <li>Delivered sales enablement and technical training to global enterprise sales teams.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Augmentix Corp.</span>
+                <span class="entry-location">Austin, Texas</span>
+            </div>
+            <div class="entry-subtitle">
+                <span>Marcom and Inside Sales Specialist</span>
+                <span class="date">Aug. 2007 &ndash; Oct. 2012</span>
+            </div>
+            <ul>
+                <li>Created end-to-end marketing materials, promotional videos, and product documentation for rugged computing systems.</li>
+                <li>Conducted market research and business analysis to inform product development and sales strategy.</li>
+                <li>Supported inside sales operations, client onboarding, and technical customer relations.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Previous Experience</h2>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">NXP Semiconductors / Liaison Resources</span>
+                <span class="entry-location">Austin, Texas</span>
+            </div>
+            <div class="entry-subtitle">
+                <span>Presentation Specialist</span>
+                <span class="date">June 2007</span>
+            </div>
+            <ul>
+                <li>Designed high-visibility keynote and technical presentations for the Freescale Technology Forum.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Harte-Hanks</span>
+                <span class="entry-location">Austin, Texas</span>
+            </div>
+            <div class="entry-subtitle">
+                <span>Executive Customer Relations</span>
+                <span class="date">Sept. 2005 &ndash; Nov. 2006</span>
+            </div>
+            <ul>
+                <li>Managed high-level escalations and delivered technical customer care for consumer electronics.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">WGVU Public Television</span>
+                <span class="entry-location">Grand Rapids, Mich.</span>
+            </div>
+            <div class="entry-subtitle">
+                <span>Production Assistant</span>
+                <span class="date">Aug. 2002 &ndash; Aug. 2005</span>
+            </div>
+            <ul>
+                <li>Operated studio broadcast equipment including cameras, lighting, and audio mixer boards.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Patents</h2>
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Promoting store items using augmented reality gaming applications</span>
+            </div>
+            <div class="entry-subtitle" style="font-style: normal; font-size: 0.95rem; margin-bottom: 0.25rem;">
+                <span>Issued: Oct. 10, 2017 | US Patent: 15/728,952</span>
+            </div>
+            <p style="margin-top: 0.25rem;">Augmented reality system pairing mobile gaming applications with shopping cart location tracking to deliver contextual in-store promotions.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education &amp; Honors</h2>
+        <div class="entry" style="margin-bottom: 0;">
+            <div class="entry-header">
+                <span class="entry-title"><a href="https://www.gvsu.edu/" target="_blank" rel="noopener">Grand Valley State University (GVSU)</a></span>
+                <span class="entry-location">Allendale, Mich.</span>
+            </div>
+            <div class="entry-subtitle">
+                <span>Bachelor of Arts: Film and Video Production</span>
+                <span class="date">2001 &ndash; 2005</span>
+            </div>
+            <p style="margin-top: 0.25rem; color: var(--text-muted); font-size: 0.95rem;">
+                Outstanding Student Award in Film/Video (2005) &bull; Peace and Justice Essay Contest Winner (2004) &bull; fxphd (Advanced VFX &amp; Post-Production, 2010)
+            </p>
+        </div>
+    </section>
+</main>
+
+<!-- Dynamic UI Controls (Hidden on Print) -->
+<div class="controls-bar">
+    <label>
+        Resume:
+        <select id="resumeToggle">
+            <option value="index.html">All Variations</option>
+            <option value="dev.html">Software Engineering</option>
+            <option value="creative.html">Creative</option>
+            <option value="film.html">Film &amp; Video Production</option>
+            <option value="general.html" selected>General Purpose</option>
+        </select>
+    </label>
+    <label>
+        Mode:
+        <select id="themeToggle">
+            <option value="system">System Default</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+    </label>
+    <label>
+        Theme:
+        <select id="colorToggle">
+            <option value="neutral">Neutral (Gray)</option>
+            <option value="cherry">Cherry</option>
+            <option value="strawberry">Strawberry</option>
+            <option value="orange">Orange</option>
+            <option value="lemon">Lemon</option>
+            <option value="lime">Lime</option>
+            <option value="blueberry">Blueberry</option>
+            <option value="grape">Grape</option>
+        </select>
+    </label>
+    <a href="Justin_Alexander_Reusch_Resume.pdf" download="Justin_Alexander_Reusch_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-download">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+        </svg>
+        Download PDF
+    </a>
+</div>
+
+<script src="js/controls.js"></script>
+
+</body>
+</html>

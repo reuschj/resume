@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-color="neutral">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Alexander Reusch - Senior Frontend Engineer</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/resume.css">
+    <link rel="stylesheet" href="css/controls.css">
+
+    <!-- Anti-FOUC Theme Pre-initialization -->
+    <script>
+        (function () {
+            const mode = localStorage.getItem('resume_mode') || 'system';
+            const color = localStorage.getItem('resume_color') || 'neutral';
+            const isDark = mode === 'system' ? window.matchMedia('(prefers-color-scheme: dark)').matches : mode === 'dark';
+            document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-color', color);
+        })();
+    </script>
+</head>
+<body>
+
+<main class="page-container">
+    <header>
+        <h1>Justin Alexander Reusch</h1>
+        <div class="contact-info">
+            <span>Phone: 512-743-7490</span>
+            <a href="mailto:reuschj@gmail.com">reuschj@gmail.com</a>
+            <a href="https://github.com/reuschj" target="_blank" rel="noopener">GitHub: reuschj</a>
+            <a href="https://linkedin.com/in/reuschj" target="_blank" rel="noopener">LinkedIn: reuschj</a>
+        </div>
+    </header>
+
+    <section>
+        <h2>Summary</h2>
+        <p>Senior Frontend Engineer blending a background in visual design with clean, practical system architecture for web, mobile, and desktop applications. Highly adaptable across technologies, I currently build scalable user interfaces utilizing modern stacks like <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener">TypeScript</a>, <a href="https://react.dev/" target="_blank" rel="noopener">React</a>, and <a href="https://www.rust-lang.org/" target="_blank" rel="noopener">Rust</a>. By integrating various agentic AI workflows (such as <a href="https://cursor.com/" target="_blank" rel="noopener">Cursor</a> and <a href="https://claude.ai/" target="_blank" rel="noopener">Claude</a>) into my daily development cycle, I speed up planning, implementation, and testing to ship reliable features faster.</p>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li><strong>Languages:</strong> <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener">TypeScript</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener">JavaScript</a>, <a href="https://www.rust-lang.org/" target="_blank" rel="noopener">Rust</a>, <a href="https://developer.apple.com/swift/" target="_blank" rel="noopener">Swift</a>, <a href="https://dev.java/" target="_blank" rel="noopener">Java</a>, <a href="https://kotlinlang.org/" target="_blank" rel="noopener">Kotlin</a>, <a href="https://www.python.org/" target="_blank" rel="noopener">Python</a></li>
+            <li><strong>AI + Agentic Development:</strong> <a href="https://cursor.com/" target="_blank" rel="noopener">Cursor</a>, <a href="https://claude.ai/" target="_blank" rel="noopener">Claude Code</a>, LLM integration (<a href="https://claude.ai/" target="_blank" rel="noopener">Claude</a>, <a href="https://openai.com/" target="_blank" rel="noopener">OpenAI</a>, <a href="https://gemini.google.com/" target="_blank" rel="noopener">Gemini</a>), Agentic planning + automated verification</li>
+            <li><strong>Frontend + Mobile:</strong> <a href="https://react.dev/" target="_blank" rel="noopener">React</a>, <a href="https://reactnative.dev/" target="_blank" rel="noopener">React Native</a>, <a href="https://developer.apple.com/xcode/swiftui/" target="_blank" rel="noopener">Swift UI</a>, <a href="https://redux-toolkit.js.org/" target="_blank" rel="noopener">Redux Toolkit</a>, <a href="https://stately.ai/docs/xstate" target="_blank" rel="noopener">XState</a>, <a href="https://rxjs.dev/" target="_blank" rel="noopener">RxJS</a>, <a href="https://www.ag-grid.com/" target="_blank" rel="noopener">AgGrid</a>, <a href="https://vanilla-extract.style/" target="_blank" rel="noopener">Vanilla Extract</a>, <a href="https://sass-lang.com/" target="_blank" rel="noopener">Sass</a></li>
+            <li><strong>Systems + Backend:</strong> <a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js</a>, <a href="https://expressjs.com/" target="_blank" rel="noopener">ExpressJS</a>, <a href="https://tauri.app/" target="_blank" rel="noopener">Tauri</a>, <a href="https://rxdb.info/" target="_blank" rel="noopener">RxDB</a>, <a href="https://graphql.org/" target="_blank" rel="noopener">GraphQL</a>, REST APIs</li>
+            <li><strong>Tooling + Testing:</strong> <a href="https://nx.dev/" target="_blank" rel="noopener">Nx</a>, <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a>, <a href="https://bun.sh/" target="_blank" rel="noopener">Bun</a>, <a href="https://git-scm.com/" target="_blank" rel="noopener">Git</a>, CI/CD, <a href="https://jestjs.io/" target="_blank" rel="noopener">Jest</a>, <a href="https://vitest.dev/" target="_blank" rel="noopener">Vitest</a>, <a href="https://playwright.dev/" target="_blank" rel="noopener">Playwright</a>, <a href="https://www.latex-project.org/" target="_blank" rel="noopener">LaTeX</a></li>
+            <li><strong>Environments + Shells:</strong> macOS, Linux, Windows/WSL2, Zsh/Bash, PowerShell</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Experience</h2>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title"><a href="https://valstro.com/" target="_blank" rel="noopener">Valstro</a></span>
+                <span class="entry-location">New York, N.Y. (Remote)</span>
+            </div>
+            <div class="entry-subtitle">
+                <span>Senior Software Engineer, Core UI</span>
+                <span class="date">July 2022 &ndash; Present</span>
+            </div>
+            <ul>
+                <li>Architecting and developing the frontend of a high-performance desktop Order Management System (OMS) for institutional brokers using <a href="https://www.typescriptlang.org/" target="_blank" rel="noopener">TypeScript</a>, <a href="https://react.dev/" target="_blank" rel="noopener">React</a>, and <a href="https://www.rust-lang.org/" target="_blank" rel="noopener">Rust</a>.</li>
+                <li>Leveraging agentic AI workflows (<a href="https://cursor.com/" target="_blank" rel="noopener">Cursor</a>, <a href="https://claude.ai/" target="_blank" rel="noopener">Claude</a>) and integrating multiple LLMs to rapidly plan architecture, generate code, and automate testing to ship features faster.</li>
+                <li>Building highly interactive, data-dense financial interfaces using <a href="https://www.ag-grid.com/" target="_blank" rel="noopener">AG Grid</a>, managing complex state and real-time data flows.</li>
+                <li>Collaborating with a team of senior engineers to establish architectural standards, enforce code quality through peer review, and share domain-specific knowledge and AI tooling strategies.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title"><a href="https://tech.walmart.com/" target="_blank" rel="noopener">Walmart Global Tech</a></span>
+                <span class="entry-location">Bentonville, Ark.</span>
+            </div>
+            <div class="stacked-role">
+                <span>Software Engineer III</span>
+                <span class="date">Oct. 2021 &ndash; July 2022</span>
+            </div>
+            <div class="stacked-role">
+                <span>Software Engineer II</span>
+                <span class="date">Jan. 2021 &ndash; Oct. 2021</span>
+            </div>
+            <div class="stacked-role" style="margin-bottom: 0.5rem;">
+                <span>Associate Software Engineer</span>
+                <span class="date">June 2018 &ndash; Jan. 2021</span>
+            </div>
+            <ul>
+                <li>Developed a Redux-based <a href="https://nodejs.org/" target="_blank" rel="noopener">Node.js</a> framework powering multiple <a href="https://react.dev/" target="_blank" rel="noopener">React</a> and <a href="https://reactnative.dev/" target="_blank" rel="noopener">React Native</a> point-of-sale (POS) applications used by Walmart store associates.</li>
+                <li>Engineered frontend interfaces that bridged client applications with specialized POS hardware to ensure stability for critical in-store systems.</li>
+                <li>Authored internal API documentation and provided direct technical support and debugging for internal teams integrating with the POS framework.</li>
+                <li>Maintained team engineering standards through architecture oversight and code reviews for junior engineers.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title"><a href="https://corporate.walmart.com/" target="_blank" rel="noopener">Walmart Inc.</a></span>
+                <span class="entry-location">Bentonville, Ark.</span>
+            </div>
+            <div class="entry-subtitle">
+                <span>Manager II, Store Communications</span>
+                <span class="date">May 2016 &ndash; June 2018</span>
+            </div>
+            <ul>
+                <li>Edited and optimized corporate communications for readability, utilizing HTML, CSS, and custom scripting to format and enhance content delivery across the company intranet.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Previous Experience</h2>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title"><a href="https://www.dell.com/" target="_blank" rel="noopener">Dell Technologies</a></span>
+                <span class="entry-location">Austin, Texas</span>
+            </div>
+            <div class="entry-subtitle">
+                <span>Product Sr. Analyst &ndash; Marketing</span>
+                <span class="date">Nov. 2012 &ndash; May 2016</span>
+            </div>
+            <ul>
+                <li>Supported product marketing and technical sales for Dell's rugged hardware portfolio, while producing graphic design and video assets for sales initiatives.</li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Augmentix Corp.</span>
+                <span class="entry-location">Austin, Texas</span>
+            </div>
+            <div class="entry-subtitle">
+                <span>Marcom and Inside Sales Specialist</span>
+                <span class="date">Aug. 2007 &ndash; Oct. 2012</span>
+            </div>
+            <ul>
+                <li>Managed product marketing and inside sales support, creating graphic design and video materials to drive product awareness and equip the sales team.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Patents</h2>
+        <div class="entry">
+            <div class="entry-header">
+                <span class="entry-title">Promoting store items using augmented reality gaming applications</span>
+            </div>
+            <div class="entry-subtitle" style="font-style: normal; font-size: 0.95rem; margin-bottom: 0.25rem;">
+                <span>Issued: Oct. 10, 2017 | US Patent: 15/728,952</span>
+            </div>
+            <p style="margin-top: 0.25rem;">Invented a system that gamifies the physical retail experience by bridging mobile augmented reality (AR) applications with shopping cart location tracking.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <div class="entry" style="margin-bottom: 0;">
+            <div class="entry-header">
+                <span class="entry-title"><a href="https://www.gvsu.edu/" target="_blank" rel="noopener">Grand Valley State University (GVSU)</a></span>
+                <span class="entry-location">Allendale, Mich.</span>
+            </div>
+            <div class="entry-subtitle">
+                <span>Bachelor of Arts: Film and Video Production</span>
+                <span class="date">2001 &ndash; 2005</span>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Dynamic UI Controls (Hidden on Print) -->
+<div class="controls-bar">
+    <label>
+        Resume:
+        <select id="resumeToggle">
+            <option value="index.html">All Variations</option>
+            <option value="dev.html" selected>Software Engineering</option>
+            <option value="creative.html">Creative</option>
+            <option value="film.html">Film &amp; Video Production</option>
+            <option value="general.html">General Purpose</option>
+        </select>
+    </label>
+    <label>
+        Mode:
+        <select id="themeToggle">
+            <option value="system">System Default</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+    </label>
+    <label>
+        Theme:
+        <select id="colorToggle">
+            <option value="neutral">Neutral (Gray)</option>
+            <option value="cherry">Cherry</option>
+            <option value="strawberry">Strawberry</option>
+            <option value="orange">Orange</option>
+            <option value="lemon">Lemon</option>
+            <option value="lime">Lime</option>
+            <option value="blueberry">Blueberry</option>
+            <option value="grape">Grape</option>
+        </select>
+    </label>
+    <a href="Justin_Alexander_Reusch_Dev_Resume.pdf" download="Justin_Alexander_Reusch_Dev_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-download">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+        </svg>
+        Download PDF
+    </a>
+</div>
+
+<script src="js/controls.js"></script>
+
+</body>
+</html>

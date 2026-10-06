@@ -1,4 +1,4 @@
-name: Build and Publish Resume
+name: Publish Resume to GitHub Pages
 
 on:
   push:
@@ -41,13 +41,14 @@ jobs:
       - name: Install Dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Generate PDF
-        run: pnpm run build:pdf
+      - name: Generate PDFs
+        run: pnpm run pdf
 
-      - name: Prepare Distribution Folder
+      - name: Stage Pages Distribution
         run: |
           mkdir -p dist
-          cp index.html dist/
+          cp *.html *.pdf dist/
+          cp -r css js dist/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

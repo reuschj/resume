@@ -1,102 +1,221 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light" data-color="neutral">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Justin Alexander Reusch</title>
-    <style>
-        :root {
-            --font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            --text-color: #111827;
-            --muted-color: #4b5563;
-            --bg-color: #ffffff;
-        }
+    <title>Justin Alexander Reusch - Resumes &amp; Curriculum Vitae</title>
 
-        body {
-            font-family: var(--font-family);
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 2rem;
-            line-height: 1.5;
-        }
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 
-        .resume-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/themes.css">
+    <link rel="stylesheet" href="css/resume.css">
+    <link rel="stylesheet" href="css/controls.css">
 
-        header {
-            border-bottom: 2px solid var(--text-color);
-            padding-bottom: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        h1 {
-            margin: 0 0 0.5rem 0;
-            font-size: 2rem;
-        }
-
-        .contact-info {
-            color: var(--muted-color);
-            font-size: 0.95rem;
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        section {
-            margin-bottom: 1.5rem;
-        }
-
-        h2 {
-            font-size: 1.25rem;
-            border-bottom: 1px solid #e5e7eb;
-            padding-bottom: 0.25rem;
-            margin-bottom: 0.75rem;
-        }
-
-        @page {
-            margin: 0.4in 0.5in;
-            size: letter;
-        }
-
-        @media print {
-            body {
-                padding: 0;
-                background: transparent !important;
-                color: #000 !important;
-            }
-            .resume-container {
-                max-width: 100%;
-            }
-        }
-    </style>
+    <!-- Anti-FOUC Theme Pre-initialization -->
+    <script>
+        (function () {
+            const mode = localStorage.getItem('resume_mode') || 'system';
+            const color = localStorage.getItem('resume_color') || 'neutral';
+            const isDark = mode === 'system' ? window.matchMedia('(prefers-color-scheme: dark)').matches : mode === 'dark';
+            document.documentElement.setAttribute('data-theme', isDark ? 'dark' : 'light');
+            document.documentElement.setAttribute('data-color', color);
+        })();
+    </script>
 </head>
 <body>
-    <div class="resume-container">
-        <header>
-            <h1>Justin Alexander Reusch</h1>
-            <div class="contact-info">
-                <span>Location: Austin, TX</span>
-                <span>Email: reuschj@gmail.com</span>
-                <span>GitHub: github.com/reuschj</span>
-                <span>LinkedIn: linkedin.com/in/reuschj</span>
-            </div>
-        </header>
 
-        <section>
-            <h2>Summary</h2>
-            <p>Senior Frontend Engineer blending visual design with clean, practical system architecture. (Starter template - replace with full resume HTML).</p>
-        </section>
+<main class="page-container">
+    <header>
+        <h1>Justin Alexander Reusch</h1>
+        <div class="contact-info">
+            <span>Phone: 512-743-7490</span>
+            <a href="mailto:reuschj@gmail.com">reuschj@gmail.com</a>
+            <a href="https://github.com/reuschj" target="_blank" rel="noopener">GitHub: reuschj</a>
+            <a href="https://linkedin.com/in/reuschj" target="_blank" rel="noopener">LinkedIn: reuschj</a>
+        </div>
+    </header>
 
-        <section>
-            <h2>Experience</h2>
-            <div>
-                <h3>Senior Frontend Engineer</h3>
-                <p>Placeholder job entry. Replace this with your complete work experience.</p>
-            </div>
-        </section>
-    </div>
+    <section>
+        <h2>Resume Variations</h2>
+        <p class="landing-intro">
+            Welcome to my resume directory. Below are targeted variations of my resume tailored to specific disciplines&mdash;spanning software engineering, creative design, film and video production, and comprehensive cross-functional leadership. Select a version to explore the interactive web resume or download a print-ready PDF.
+        </p>
+
+        <div class="variations-grid">
+            <!-- Software Engineering -->
+            <article class="variation-card">
+                <div>
+                    <h3 class="card-title">Software Engineering</h3>
+                    <div class="card-subtitle">Senior Frontend &amp; Full-Stack</div>
+                    <p class="card-desc">
+                        Tailored for senior frontend, full-stack, and UI architecture roles. Emphasizes modern TypeScript, React, Rust, scalable web systems, and modern agentic AI development workflows.
+                    </p>
+                    <div class="card-tags">
+                        <span class="card-tag">TypeScript</span>
+                        <span class="card-tag">React</span>
+                        <span class="card-tag">Rust</span>
+                        <span class="card-tag">Next.js</span>
+                        <span class="card-tag">Node.js</span>
+                        <span class="card-tag">AI Workflows</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="dev.html" class="btn-view">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7z"/>
+                        </svg>
+                        View Resume
+                    </a>
+                    <a href="Justin_Alexander_Reusch_Dev_Resume.pdf" download="Justin_Alexander_Reusch_Dev_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-pdf">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                        </svg>
+                        PDF
+                    </a>
+                </div>
+            </article>
+
+            <!-- Creative -->
+            <article class="variation-card">
+                <div>
+                    <h3 class="card-title">Creative</h3>
+                    <div class="card-subtitle">Visual Design &amp; Multimedia Production</div>
+                    <p class="card-desc">
+                        Tailored for visual design, digital media, UI/UX systems, brand identity, and motion graphics. Showcases extensive creative direction and multimedia production expertise.
+                    </p>
+                    <div class="card-tags">
+                        <span class="card-tag">UI/UX Design</span>
+                        <span class="card-tag">Figma</span>
+                        <span class="card-tag">Brand Identity</span>
+                        <span class="card-tag">Motion Graphics</span>
+                        <span class="card-tag">Adobe CC</span>
+                        <span class="card-tag">Typography</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="creative.html" class="btn-view">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7z"/>
+                        </svg>
+                        View Resume
+                    </a>
+                    <a href="Justin_Alexander_Reusch_Creative_Resume.pdf" download="Justin_Alexander_Reusch_Creative_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-pdf">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                        </svg>
+                        PDF
+                    </a>
+                </div>
+            </article>
+
+            <!-- Film & Video Production -->
+            <article class="variation-card">
+                <div>
+                    <h3 class="card-title">Film &amp; Video Production</h3>
+                    <div class="card-subtitle">Directing, Cinematography &amp; Editing</div>
+                    <p class="card-desc">
+                        Tailored for film directing, cinematography, camera operation, lighting design, video editing, color grading, and comprehensive post-production workflows.
+                    </p>
+                    <div class="card-tags">
+                        <span class="card-tag">Directing</span>
+                        <span class="card-tag">Cinematography</span>
+                        <span class="card-tag">Lighting Design</span>
+                        <span class="card-tag">Video Editing</span>
+                        <span class="card-tag">DaVinci Resolve</span>
+                        <span class="card-tag">Premiere Pro</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="film.html" class="btn-view">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7z"/>
+                        </svg>
+                        View Resume
+                    </a>
+                    <a href="Justin_Alexander_Reusch_Film_Resume.pdf" download="Justin_Alexander_Reusch_Film_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-pdf">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                        </svg>
+                        PDF
+                    </a>
+                </div>
+            </article>
+
+            <!-- General Purpose -->
+            <article class="variation-card">
+                <div>
+                    <h3 class="card-title">General Purpose</h3>
+                    <div class="card-subtitle">Cross-Functional Leadership &amp; Delivery</div>
+                    <p class="card-desc">
+                        Comprehensive master resume highlighting cross-functional leadership bridging software engineering, creative media, product marketing, and business analysis.
+                    </p>
+                    <div class="card-tags">
+                        <span class="card-tag">Cross-Functional</span>
+                        <span class="card-tag">Full-Stack</span>
+                        <span class="card-tag">Creative Direction</span>
+                        <span class="card-tag">Product Strategy</span>
+                        <span class="card-tag">Leadership</span>
+                    </div>
+                </div>
+                <div class="card-actions">
+                    <a href="general.html" class="btn-view">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3m-2 16H5V5h7V3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7h-2v7z"/>
+                        </svg>
+                        View Resume
+                    </a>
+                    <a href="Justin_Alexander_Reusch_Resume.pdf" download="Justin_Alexander_Reusch_Resume.pdf" target="_blank" rel="noopener noreferrer" class="btn-pdf">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                        </svg>
+                        PDF
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+</main>
+
+<!-- Dynamic UI Controls -->
+<div class="controls-bar">
+    <label>
+        Resume:
+        <select id="resumeToggle">
+            <option value="index.html" selected>All Variations</option>
+            <option value="dev.html">Software Engineering</option>
+            <option value="creative.html">Creative</option>
+            <option value="film.html">Film &amp; Video Production</option>
+            <option value="general.html">General Purpose</option>
+        </select>
+    </label>
+    <label>
+        Mode:
+        <select id="themeToggle">
+            <option value="system">System Default</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+    </label>
+    <label>
+        Theme:
+        <select id="colorToggle">
+            <option value="neutral">Neutral (Gray)</option>
+            <option value="cherry">Cherry</option>
+            <option value="strawberry">Strawberry</option>
+            <option value="orange">Orange</option>
+            <option value="lemon">Lemon</option>
+            <option value="lime">Lime</option>
+            <option value="blueberry">Blueberry</option>
+            <option value="grape">Grape</option>
+        </select>
+    </label>
+</div>
+
+<script src="js/controls.js"></script>
+
 </body>
 </html>

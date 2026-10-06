@@ -1,0 +1,79 @@
+/* --- Control Panel (Web Only) --- */
+.controls-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--bg-paper);
+    border-top: 1px solid var(--border);
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+    font-size: 0.9rem;
+    color: var(--text-main);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.controls-bar label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+}
+
+.controls-bar select {
+    background: var(--bg-body);
+    color: var(--text-main);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 0.2rem 0.5rem;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background-color: var(--accent);
+    color: #ffffff !important;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    text-decoration: none !important;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    transition: opacity 0.2s, background-color 0.3s ease;
+    border: none;
+}
+
+.btn-download:hover {
+    opacity: 0.9;
+}
+
+.btn-download svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+/* --- Mobile Responsiveness for Controls --- */
+@media screen and (max-width: 640px) {
+    .controls-bar {
+        flex-direction: column;
+        gap: 0.75rem;
+        padding: 1rem;
+    }
+}
+
+/* --- Print Override --- */
+@media print {
+    .controls-bar {
+        display: none !important;
+    }
+}
