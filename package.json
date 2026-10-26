@@ -6,9 +6,7 @@
   "type": "module",
   "packageManager": "pnpm@9.15.4",
   "scripts": {
-    "pdf": "node scripts/export-pdf.js",
-    "build": "node scripts/export-pdf.js",
-    "test": "node scripts/export-pdf.js"
+    "pdf": "node scripts/export-pdf.js"
   },
   "dependencies": {
     "puppeteer": "^24.0.0"

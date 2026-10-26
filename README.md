@@ -1,8 +1,8 @@
 # Resume
 
-Master HTML resumes for Justin Alexander Reusch, with automated PDF generation via Puppeteer and continuous deployment to GitHub Pages.
+Master HTML resumes for Justin Alexander Reusch, with downloadable PDFs and continuous deployment to GitHub Pages.
 
-Supports multiple resume variations sharing unified styling, theming, dynamic controls, and PDF export:
+Supports multiple resume variations sharing unified styling, theming, dynamic controls, and PDF downloads:
 - **Software Engineering** (`dev.html`) &ndash; Tailored for senior frontend, full-stack, and software engineering roles.
 - **Creative** (`creative.html`) &ndash; Tailored for visual design, multimedia production, brand messaging, UI/UX, and digital content.
 - **Film & Video Production** (`film.html`) &ndash; Tailored for directing, cinematography, lighting, video editing, and motion graphics.
@@ -13,74 +13,48 @@ Supports multiple resume variations sharing unified styling, theming, dynamic co
 ```
 resume/
 ├── .github/workflows/
-│   └── publish.yml       # GitHub Actions pipeline (generates PDFs & deploys to Pages)
+│   └── publish.yml       # GitHub Actions deployment to Pages
 ├── css/
 │   ├── themes.css        # Base variables, dark mode, and 7 color palette presets
 │   ├── resume.css        # Typography, layout, entry components, print engine & @page rules
 │   └── controls.css      # Floating bottom toolbar, selectors, and download button
 ├── js/
-│   └── controls.js       # Theming engine (system/light/dark), color switcher, persistence & resume routing
-├── scripts/
-│   ├── export-pdf.js     # Headless Puppeteer script generating print-ready PDFs
-│   └── logger.js         # Logging utility for CLI output
+│   └── controls.js       # Theming engine (system/light/dark), color switcher, persistence & conditional navigation
 ├── index.html            # Directory portal linking to all resume variations
 ├── dev.html              # Software Engineering resume
 ├── creative.html         # Creative & Multimedia Production resume
 ├── film.html             # Film & Video Production resume
 ├── general.html          # General-purpose master resume
-├── package.json          # Dependencies and PDF export scripts
-├── pnpm-lock.yaml        # Pinned pnpm lockfile
 └── README.md             # Project documentation
 ```
 
 ## Modular Architecture & Shared Components
 
-- **Zero-Build Static HTML**: The resumes are pure HTML5, CSS3, and vanilla JavaScript. They require no compilation, bundler, or build step—simply open any `.html` file directly in a web browser.
+- **Static Web Architecture**: Pure HTML5, CSS3, and vanilla JavaScript. Simply open any `.html` file directly in a web browser.
 - **CSS Separation**:
   - `css/themes.css`: Defines the `:root` and `[data-theme="dark"]` CSS variables along with all color themes (`neutral`, `cherry`, `strawberry`, `orange`, `lemon`, `lime`, `blueberry`, `grape`).
-  - `css/resume.css`: Handles core typography (Merriweather headers and Inter body), layout containers, job entries, multi-role stacking, responsive mobile adjustments, and print layout rules (`@media print`, page break avoidance, margin rules).
-  - `css/controls.css`: Styles the interactive bottom controls bar, theme dropdowns, and PDF download button.
-- **Shared Theming Engine (`js/controls.js`)**:
+  - `css/resume.css`: Handles core typography (Merriweather headers and Inter body), layout containers, job entries, multi-role stacking, responsive mobile adjustments, variation card visibility flags, and print layout rules (`@media print`, page break avoidance, margin rules).
+  - `css/controls.css`: Styles the interactive bottom controls bar, theme dropdowns, Back button, and PDF download button.
+- **Landing Page & Variation Flagging**:
+  - `index.html` functions as the sole resume directory picker.
+  - Cards in `index.html` use `data-enabled="true"` / `data-enabled="false"` flags. Variations set to `data-enabled="false"` are cleanly hidden from the landing page until ready to be turned back on.
+- **Shared Theming Engine & Conditional Navigation (`js/controls.js`)**:
   - Manages OS theme synchronization (`prefers-color-scheme`), manual mode toggling, color theme selection, and persists choices in `localStorage` across all pages.
-  - Handles the variation switcher to easily navigate between different resume versions (`dev.html`, `creative.html`, `film.html`, `general.html`).
+  - **Conditional Back Navigation**: When a visitor clicks into a resume from the landing page, a "Back" button appears in the bottom bar to return to `index.html`. When an employer is provided a direct link to a specific resume (e.g. `dev.html`), no Back button or version picker is shown, restricting access strictly to the targeted resume.
 - **Adding a New Resume Variation**:
   1. Duplicate any existing resume HTML file to a new HTML file.
   2. Customize the content inside `<main class="page-container">`.
-  3. Add an `<option>` to the `<select id="resumeToggle">` across pages.
-  4. Register the new resume file and its target PDF in `scripts/export-pdf.js`.
+  3. Add a corresponding `<article class="variation-card" data-enabled="true">` card in `index.html`.
+  4. Link the printable PDF in the floating controls bar's download button (`<a class="btn-download">`).
 
-## Viewing & Local Development
+## Viewing Locally
 
-### 1. Direct Viewing (No Build Required)
-Because these are simple static files, you can open any of them directly in your web browser:
-* Double-click `index.html` (portal), `dev.html`, `creative.html`, `film.html`, or `general.html`.
-* Or run any simple local HTTP server:
-  ```bash
-  python3 -m http.server 8000
-  # or
-  npx serve .
-  ```
+Open any `.html` file directly in your web browser:
+- Double-click `index.html` (portal), `dev.html`, `creative.html`, `film.html`, or `general.html`.
 
-### 2. Generating PDFs
-When you want to update the printable PDFs locally:
-```bash
-# Install Puppeteer (only dependency)
-pnpm install
-
-# Generate PDFs directly in the repo root
-pnpm run pdf
-```
-This renders and saves the PDFs right alongside the HTML files where the download buttons link:
-- `Justin_Alexander_Reusch_Dev_Resume.pdf` (from `dev.html`)
-- `Justin_Alexander_Reusch_Creative_Resume.pdf` (from `creative.html`)
-- `Justin_Alexander_Reusch_Film_Resume.pdf` (from `film.html`)
-- `Justin_Alexander_Reusch_Resume.pdf` (from `general.html`)
-- `Justin_Alexander_Reusch_General_Resume.pdf` (alias copy of general resume)
+### PDF Downloads
+Each resume page features a **Download PDF** button in the floating bottom controls bar linking directly to its printable PDF. You can also print directly from any browser (`Cmd+P` / `Ctrl+P`), which formats the document using the integrated `@media print` styles.
 
 ## GitHub Pages Deployment
 
-The automated workflow in `.github/workflows/publish.yml` triggers on every push to `main`:
-1. Checks out the code and sets up Node.js with `pnpm`.
-2. Installs dependencies using `pnpm install --frozen-lockfile`.
-3. Runs `pnpm run pdf` to generate fresh PDFs.
-4. Stages the HTML, CSS, JS, and PDFs for deployment and publishes directly to GitHub Pages.
+The automated workflow in `.github/workflows/publish.yml` publishes the site and PDFs directly to GitHub Pages on every push to `main`.

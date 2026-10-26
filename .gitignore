@@ -1,10 +1,13 @@
 # Dependencies
 node_modules/
 
-# Build artifacts
+# Artifacts
 dist/
 *.pdf
 
 # Operating System files
 .DS_Store
 Thumbs.db
+
+# Agent skills
+skills/

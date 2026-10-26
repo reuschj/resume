@@ -169,9 +169,9 @@ li {
 }
 
 .credits-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.35rem 1.5rem;
+    columns: 2;
+    column-gap: 2rem;
+    column-rule: 1px solid var(--border);
     list-style: none;
     padding: 0;
     margin: 0.25rem 0 0.5rem 0;
@@ -182,6 +182,8 @@ li {
     line-height: 1.4;
     margin-bottom: 0.25rem;
     color: var(--text-main);
+    break-inside: avoid;
+    page-break-inside: avoid;
 }
 
 .credits-grid li strong,
@@ -223,6 +225,13 @@ li {
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
     border-color: var(--accent);
+}
+
+/* Variation Card Visibility Flags: Set data-enabled="false" to hide from index landing page */
+.variation-card[data-enabled="false"],
+.variation-card.disabled,
+.variation-card[hidden] {
+    display: none !important;
 }
 
 .card-title {
@@ -345,7 +354,8 @@ li {
     }
 
     .credits-grid {
-        grid-template-columns: 1fr;
+        columns: 1;
+        column-rule: none;
     }
 
     .variations-grid {
@@ -370,6 +380,8 @@ li {
     *::after {
         -webkit-print-color-adjust: exact !important;
         print-color-adjust: exact !important;
+        transition: none !important;
+        animation: none !important;
     }
 
     body {
@@ -394,20 +406,20 @@ li {
         size: letter;
     }
 
-    /* Print Titles: Tasteful executive blue */
+    /* Print Titles: Lightly themed to match active color scheme */
     h1 {
         font-size: 19pt;
         margin-bottom: 0.15rem;
         border: none;
-        color: #1e40af !important;
+        color: var(--print-title) !important;
     }
 
     h2 {
         font-size: 11.5pt;
         margin: 0.75rem 0 0.35rem 0;
         padding-bottom: 0.1rem;
-        color: #1e40af !important;
-        border-bottom: 2px solid #2563eb !important;
+        color: var(--print-title) !important;
+        border-bottom: 2px solid var(--print-border) !important;
     }
 
     /* Contact Bar & Metadata: Refined slate gray */
@@ -472,7 +484,7 @@ li {
 
     .credits-category h3 {
         font-size: 8.5pt;
-        color: #1e40af !important;
+        color: var(--print-title) !important;
         border-bottom: 1px solid #cbd5e1 !important;
         margin: 0.35rem 0 0.15rem 0;
         padding-bottom: 0.05rem;
@@ -481,9 +493,9 @@ li {
     }
 
     .credits-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.1rem 1.25rem;
+        columns: 2;
+        column-gap: 1.5rem;
+        column-rule: 1px solid #cbd5e1;
         list-style: none;
         padding: 0;
         margin: 0.1rem 0;
@@ -494,10 +506,21 @@ li {
         line-height: 1.25;
         margin-bottom: 0.08rem;
         color: #1f2937 !important;
+        break-inside: avoid;
+        page-break-inside: avoid;
     }
 
     .credits-grid li .credit-meta {
         color: #4b5563 !important;
+    }
+
+    /* Landing Card Titles (when printing catalog) */
+    .card-title {
+        color: var(--print-title) !important;
+    }
+
+    .card-subtitle {
+        color: var(--print-border) !important;
     }
 
     /* --- Strict Page Break Logic --- */

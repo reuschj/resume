@@ -7,6 +7,8 @@
     --border: #e5e7eb;
     --accent: #2563eb;
     --header-color: #111827;
+    --print-title: #1e40af;
+    --print-border: #2563eb;
 }
 
 /* --- Dark Mode Default Variables --- */
@@ -20,13 +22,30 @@
     --header-color: #f9fafb;
 }
 
-/* --- Color Presets (Light & Dark Variations) --- */
+/* --- Color Presets (Light & Dark Web Variations + High-Contrast Print Scheme) --- */
+
+/* Neutral (Gray) */
+[data-color="neutral"] {
+    --bg-body: #f3f4f6;
+    --accent: #4b5563;
+    --header-color: #111827;
+    --print-title: #374151;
+    --print-border: #6b7280;
+}
+[data-theme="dark"][data-color="neutral"] {
+    --bg-body: #111827;
+    --bg-paper: #1f2937;
+    --accent: #9ca3af;
+    --header-color: #f9fafb;
+}
 
 /* Cherry */
 [data-color="cherry"] {
     --bg-body: #fee2e2;
     --accent: #dc2626;
     --header-color: #991b1b;
+    --print-title: #b91c1c;
+    --print-border: #dc2626;
 }
 [data-theme="dark"][data-color="cherry"] {
     --bg-body: #450a0a;
@@ -40,6 +59,8 @@
     --bg-body: #ffe4e6;
     --accent: #e11d48;
     --header-color: #be123c;
+    --print-title: #be123c;
+    --print-border: #e11d48;
 }
 [data-theme="dark"][data-color="strawberry"] {
     --bg-body: #4c0519;
@@ -53,6 +74,8 @@
     --bg-body: #ffedd5;
     --accent: #ea580c;
     --header-color: #9a3412;
+    --print-title: #c2410c;
+    --print-border: #ea580c;
 }
 [data-theme="dark"][data-color="orange"] {
     --bg-body: #431407;
@@ -66,6 +89,8 @@
     --bg-body: #fef08a;
     --accent: #ca8a04;
     --header-color: #a16207;
+    --print-title: #a16207;
+    --print-border: #ca8a04;
 }
 [data-theme="dark"][data-color="lemon"] {
     --bg-body: #271300;
@@ -79,6 +104,8 @@
     --bg-body: #dcfce7;
     --accent: #16a34a;
     --header-color: #15803d;
+    --print-title: #15803d;
+    --print-border: #16a34a;
 }
 [data-theme="dark"][data-color="lime"] {
     --bg-body: #052e16;
@@ -92,6 +119,8 @@
     --bg-body: #e0f2fe;
     --accent: #0284c7;
     --header-color: #0369a1;
+    --print-title: #1e40af;
+    --print-border: #2563eb;
 }
 [data-theme="dark"][data-color="blueberry"] {
     --bg-body: #082f49;
@@ -105,6 +134,8 @@
     --bg-body: #f3e8ff;
     --accent: #9333ea;
     --header-color: #7e22ce;
+    --print-title: #7e22ce;
+    --print-border: #9333ea;
 }
 [data-theme="dark"][data-color="grape"] {
     --bg-body: #2e1065;
